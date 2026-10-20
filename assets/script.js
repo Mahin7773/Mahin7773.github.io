@@ -3,7 +3,7 @@ const GITHUB_USER = "Mahin7773";
 // Thesis repository. `id` is GitHub's permanent numeric repo ID, so the link keeps
 // working after a rename; `name` is only the fallback if the API can't be reached.
 // Get the ID from https://api.github.com/repos/Mahin7773/<repo-name> ("id" field).
-const THESIS_REPO = { id: null, name: "" };
+const THESIS_REPO = { id: null, name: "Thesis_Undergrad" };
 
 // Projects; `repo` is the GitHub repository name, or null if the code isn't public.
 const projects = [
@@ -90,16 +90,18 @@ document.getElementById("project-grid").innerHTML = projects
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Thesis link: show the fallback URL right away, then swap in the current URL looked up by repo ID
+// Thesis link: look the repo up (by ID when set, so renames don't break it) and only
+// show the link once GitHub confirms it's public. A private repo stays hidden.
 (async function linkThesisRepo() {
-  if (!THESIS_REPO.id && !THESIS_REPO.name) return;
-  const link = document.getElementById("thesis-repo");
-  if (THESIS_REPO.name) link.href = repoUrl(THESIS_REPO.name);
-  document.getElementById("thesis-links").hidden = false;
-  if (!THESIS_REPO.id) return;
+  const api = THESIS_REPO.id
+    ? `https://api.github.com/repositories/${THESIS_REPO.id}`
+    : THESIS_REPO.name && `https://api.github.com/repos/${GITHUB_USER}/${THESIS_REPO.name}`;
+  if (!api) return;
   try {
-    const res = await fetch(`https://api.github.com/repositories/${THESIS_REPO.id}`);
-    if (res.ok) link.href = (await res.json()).html_url;
+    const res = await fetch(api);
+    if (!res.ok) return;
+    document.getElementById("thesis-repo").href = (await res.json()).html_url;
+    document.getElementById("thesis-links").hidden = false;
   } catch (e) {}
 })();
 
