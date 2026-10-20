@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md. Mashrur Alam</title>
+  <meta name="description" content="Md. Mashrur Alam: Lecturer in CSE at Dhaka International University. Research interests in computer vision, deep learning and security.">
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/64249566?v=4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="nav">
+    <a href="#" class="logo">Md. Mashrur Alam</a>
+    <nav>
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#cv">CV</a>
+      <button id="theme-toggle" aria-label="Toggle dark mode">◐</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About -->
+    <section class="hero" id="about">
+      <div class="hero-text">
+        <h1>Md. Mashrur Alam</h1>
+        <p class="role">Lecturer, Department of CSE · Dhaka International University</p>
+        <p>
+          I am a Lecturer in Computer Science and Engineering at Dhaka International University. I received my
+          B.Sc. in CSE from <strong>Khulna University of Engineering &amp; Technology (KUET)</strong>. My undergraduate
+          thesis worked on neural 3D reconstruction from multi-view images. I am currently
+          <strong>looking for graduate research opportunities (MS / PhD)</strong> in computer vision, deep learning
+          and security.
+        </p>
+        <div class="links">
+          <a class="btn primary" href="#cv">Curriculum Vitae</a>
+          <a class="btn" href="mailto:mashrur773@gmail.com">Email</a>
+          <a class="btn" href="https://github.com/Mahin7773" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://linkedin.com/in/mashrur73" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/64249566?v=4" alt="Photo of Md. Mashrur Alam">
+    </section>
+
+    <section class="two-col">
+      <div>
+        <h2>Research interests</h2>
+        <ul class="chips">
+          <li>Computer Vision</li><li>Image Processing</li><li>Deep Learning</li>
+          <li>Network &amp; System Security</li><li>Web &amp; Application Security</li><li>Cryptography</li>
+          <li>Cloud &amp; Distributed Systems Security</li><li>Privacy &amp; Data Protection</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Education</h2>
+        <div class="entry">
+          <div class="entry-head">
+            <strong>Khulna University of Engineering &amp; Technology</strong>
+            <span class="date">Feb 2019 – Mar 2024</span>
+          </div>
+          <div class="entry-sub">B.Sc. Engg. in Computer Science and Engineering</div>
+          <div class="entry-sub">CGPA <strong>3.65 / 4.00</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section id="research">
+      <h2>Research</h2>
+      <article class="research-card">
+        <div class="research-label">Undergraduate Thesis · KUET</div>
+        <h3>3D Reconstruction from Multi-View 2D Images</h3>
+        <ul>
+          <li>Used Neural Graphics Primitives to reconstruct 3D objects from multi-view 2D images.</li>
+          <li>Applied multi-resolution hash encoding to improve both training speed and reconstruction quality.</li>
+          <li>Reduced training time from days to minutes compared with traditional NeRF methods.</li>
+        </ul>
+        <div class="tags"><span>Python</span><span>PyTorch</span><span>OpenCV</span><span>NVIDIA Apex</span><span>NeRF</span></div>
+        <div class="research-links" id="thesis-links" hidden>
+          <a id="thesis-repo" href="#" target="_blank" rel="noopener">Thesis repository →</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Work experience</h2>
+      <div class="timeline">
+        <div class="entry">
+          <div class="entry-head">
+            <strong>Lecturer, Dept. of CSE</strong>
+            <span class="date">Jan 2025 – Present</span>
+          </div>
+          <div class="entry-sub">Dhaka International University · Badda, Dhaka</div>
+        </div>
+        <div class="entry">
+          <div class="entry-head">
+            <strong>Lecturer, Dept. of CSE &amp; CSIT</strong>
+            <span class="date">Jul 2024 – Dec 2025</span>
+          </div>
+          <div class="entry-sub">Shanto-Mariam University of Creative Technology · Uttara, Dhaka</div>
+        </div>
+      </div>
+
+      <h3 class="subhead">Academic service</h3>
+      <ul class="plain">
+        <li><strong>Organizing Committee</strong>, 3<sup>rd</sup> International Conference on Big Data, IoT and Machine Learning (BIM 2025)</li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Technical skills</h2>
+      <dl class="skills">
+        <dt>Languages</dt><dd>Python, C/C++, Java</dd>
+        <dt>Deep learning</dt><dd>PyTorch, TensorFlow</dd>
+        <dt>Libraries &amp; tools</dt><dd>NumPy, Pandas, scikit-learn, OpenCV, Git, Docker</dd>
+        <dt>Web</dt><dd>HTML, CSS, JavaScript, PHP, MySQL, Django</dd>
+        <dt>Mobile</dt><dd>Android (Java/Kotlin), iOS (Swift)</dd>
+        <dt>Systems</dt><dd>Windows, Linux (Debian, Arch)</dd>
+      </dl>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <p class="muted">Projects with a public repository link to their code on GitHub.</p>
+      <div class="grid" id="project-grid"></div>
+    </section>
+
+    <!-- Awards -->
+    <section id="awards">
+      <h2>Awards</h2>
+      <ul class="plain">
+        <li><strong>Dean's Award</strong>, Faculty of EEE, KUET (Sophomore year)</li>
+        <li><strong>General Scholarship</strong>, HSC (2018)</li>
+        <li><strong>Talentpool Scholarship</strong>, SSC (2016)</li>
+      </ul>
+    </section>
+
+    <!-- CV: update the date below whenever cv/Mashrur_Alam_CV.pdf is replaced -->
+    <section id="cv">
+      <h2>Curriculum Vitae</h2>
+      <div class="cv-bar">
+        <div class="cv-updated">Last updated: <span class="when">20 October 2026</span></div>
+        <a class="btn primary" href="cv/Mashrur_Alam_CV.pdf" download="Mashrur_Alam_CV.pdf">Download CV (PDF)</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Md. Mashrur Alam · <a href="mailto:mashrur773@gmail.com">mashrur773@gmail.com</a></p>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
