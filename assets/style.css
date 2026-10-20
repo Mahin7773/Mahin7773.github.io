@@ -1,37 +1,37 @@
-/* Academic theme: light by default, dark via toggle or system preference */
+/* Greyscale academic theme: light by default, dark via toggle or system preference */
 :root {
-  --bg: #fbfaf7;
+  --bg: #fafafa;
   --surface: #ffffff;
-  --border: #e5e2da;
-  --text: #1f2328;
-  --muted: #5b616b;
-  --accent: #1f4e8c;
-  --accent-soft: #e8eef7;
+  --border: #dedede;
+  --text: #1a1a1a;
+  --muted: #5c5c5c;
+  --accent: #1a1a1a;
+  --accent-soft: #ececec;
   --accent-ink: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #14171c;
-    --surface: #1b1f26;
-    --border: #2c323c;
-    --text: #e6e6e3;
-    --muted: #a0a6b0;
-    --accent: #8ab4f0;
-    --accent-soft: #1f2a3a;
-    --accent-ink: #14171c;
+    --bg: #121212;
+    --surface: #1b1b1b;
+    --border: #2f2f2f;
+    --text: #ebebeb;
+    --muted: #a3a3a3;
+    --accent: #ebebeb;
+    --accent-soft: #262626;
+    --accent-ink: #121212;
   }
 }
 
 :root[data-theme="dark"] {
-  --bg: #14171c;
-  --surface: #1b1f26;
-  --border: #2c323c;
-  --text: #e6e6e3;
-  --muted: #a0a6b0;
-  --accent: #8ab4f0;
-  --accent-soft: #1f2a3a;
-  --accent-ink: #14171c;
+  --bg: #121212;
+  --surface: #1b1b1b;
+  --border: #2f2f2f;
+  --text: #ebebeb;
+  --muted: #a3a3a3;
+  --accent: #ebebeb;
+  --accent-soft: #262626;
+  --accent-ink: #121212;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -117,7 +117,26 @@ h3 { font-size: 1.25rem; font-weight: 600; }
 }
 .btn:hover { text-decoration: none; border-color: var(--accent); color: var(--accent); }
 .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
-.btn.primary:hover { color: var(--accent-ink); filter: brightness(1.1); }
+.btn.primary:hover { color: var(--accent-ink); opacity: 0.85; }
+.hero-text .reach {
+  margin-top: 1.1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.92rem;
+}
+.reach a { color: var(--text); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
+#copy-email {
+  margin-left: 0.4rem;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  border-radius: 4px;
+  padding: 0 0.45rem;
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+#copy-email:hover { color: var(--text); border-color: var(--text); }
 
 /* Chips and tags */
 .chips { list-style: none; display: flex; flex-wrap: wrap; gap: 0.45rem; }
@@ -171,6 +190,7 @@ h3 { font-size: 1.25rem; font-weight: 600; }
 .research-card h3 { margin: 0.25rem 0 0.75rem; }
 .research-card ul { margin-left: 1.2rem; color: var(--muted); }
 .research-links { margin-top: 0.9rem; font-size: 0.92rem; }
+.research-links a { text-decoration: underline; text-underline-offset: 3px; }
 
 /* Projects */
 .grid {

@@ -16,8 +16,8 @@ const projects = [
   },
   {
     name: "GridLock",
-    repo: null,
-    description: "6×6 grid game with single- and multi-player modes. The AI opponent uses Minimax with alpha-beta pruning.",
+    repo: "GridLock",
+    description: "Two-player strategy game on a 6×6 grid where each move blocks nearby cells, built for the CSE 4110 Artificial Intelligence Lab. The computer opponent uses Minimax with alpha-beta pruning.",
     tags: ["Python", "PyGame"],
   },
   {
@@ -84,6 +84,18 @@ document.getElementById("project-grid").innerHTML = projects
   .join("");
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// Copy email, for visitors who don't use Gmail
+const copyBtn = document.getElementById("copy-email");
+copyBtn.addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText("mashrur.alam73@gmail.com");
+    copyBtn.textContent = "Copied";
+  } catch (e) {
+    copyBtn.textContent = "Copy failed";
+  }
+  setTimeout(() => (copyBtn.textContent = "Copy"), 1500);
+});
 
 // Theme toggle, remembered per browser
 const root = document.documentElement;
